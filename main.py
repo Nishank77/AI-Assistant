@@ -20,6 +20,10 @@ from plyer import notification
 from youtubesearchpython import VideosSearch
 
 
+import logging
+logging.basicConfig(level=logging.CRITICAL)  # Only show critical errors
+
+
 
 os.environ['HUGGINGFACEHUB_API_TOKEN'] = user_config.JOI_Hugging_Face
 
@@ -124,7 +128,6 @@ def main_process():
                     "https://www.youtube.com/watch?v=_r-nPqWGG6c"
                 ])
                 webbrowser.open(random_song)
-                return
 
             try:
                 # Search for the query on YouTube
