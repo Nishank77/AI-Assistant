@@ -128,6 +128,7 @@ def main_process():
                     "https://www.youtube.com/watch?v=_r-nPqWGG6c"
                 ])
                 webbrowser.open(random_song)
+                continue
 
             try:
                 # Search for the query on YouTube
@@ -426,6 +427,10 @@ def main_process():
             speak(generated_text)
 
 
+
+        elif "stop" in request.lower():
+            speak("Goodbye!")
+            break  # Exit the loop and stop the assistant
 
 
 
